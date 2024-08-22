@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boots (MVC)</title>
+</head>
+<body>
+    <h1>Boots (MVC)</h1>
+
+    <h2>All Boots</h2>
+    <ul>
+        <!-- Loop through boots and display -->
+        <!-- Assuming you use Thymeleaf or JSP to render -->
+        <li th:each="boot : ${boots}">
+            Name: <span th:text="${boot.name}"></span>, 
+            Type: <span th:text="${boot.type}"></span>, 
+            Size: <span th:text="${boot.size}"></span>
+        </li>
+    </ul>
+</body>
+</html>

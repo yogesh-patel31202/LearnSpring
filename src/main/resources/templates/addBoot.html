@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Boot</title>
+</head>
+<body>
+    <h1>Add Boot</h1>
+
+    <form action="/web/boots/add" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" required><br>
+        <label for="size">Size:</label>
+        <input type="text" id="size" name="size" required><br>
+        <button type="submit">Add Boot</button>
+    </form>
+
+    <h2>All Boots</h2>
+    <ul>
+        <!-- Loop through boots and display -->
+        <!-- Assuming you use Thymeleaf or JSP to render -->
+        <li th:each="boot : ${boots}">
+            Name: <span th:text="${boot.name}"></span>, 
+            Type: <span th:text="${boot.type}"></span>, 
+            Size: <span th:text="${boot.size}"></span>
+        </li>
+    </ul>
+</body>
+</html>
